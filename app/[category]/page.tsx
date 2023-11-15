@@ -3,6 +3,8 @@ import { simplifiedProduct } from "../interface";
 import { client } from "../lib/sanity";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 async function getData(cateogry: string) {
   const query = `*[_type == "product" && category->name == "${cateogry}"] {
         _id,
